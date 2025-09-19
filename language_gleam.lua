@@ -47,8 +47,8 @@ syntax.add {
     { pattern = "0[oO][_0-7]+",          type = "number" },
     { pattern = "0[xX][_%x]+",           type = "number" },
     { pattern = "-?%d+_%d",              type = "number" },
-    { pattern = "-?%d+[%d%.eE]*f?",      type = "number" },
-    { pattern = "-?%.?%d+f?",            type = "number" }, -- Maybe some number patterns are redundant
+    { pattern = "-?%d+[%d%.eE]*",        type = "number" },
+    { pattern = "-?%.?%d+",              type = "number" }, -- Maybe some number patterns are redundant
     { pattern = "[.%+%-=/%*%^%%<>!~|&]", type = "operator" },
     { pattern = "[%a_][%w_]*%f[(]",      type = "function" },
     { pattern = "[%a_][%w_]*",           type = "symbol" },
