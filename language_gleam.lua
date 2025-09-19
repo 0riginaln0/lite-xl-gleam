@@ -44,8 +44,8 @@ syntax.add {
     { pattern = "//.-\n",                type = "comment" },
     { pattern = { '"', '"', '\\' },      type = "string" },
     { pattern = "0[bB][_01]+",           type = "number" },
-    { pattern = "0[oO_][0-7]+",          type = "number" },
-    { pattern = "0[xX][%x_]+",           type = "number" },
+    { pattern = "0[oO][_0-7]+",          type = "number" },
+    { pattern = "0[xX][_%x]+",           type = "number" },
     { pattern = "-?%d+_%d",              type = "number" },
     { pattern = "-?%d+[%d%.eE]*f?",      type = "number" },
     { pattern = "-?%.?%d+f?",            type = "number" }, -- Maybe some number patterns are redundant
