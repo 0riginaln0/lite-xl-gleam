@@ -1,5 +1,5 @@
 # lite-xl-gleam
-[Gleam](https://gleam.run) language syntax highlighting for the Lite XL text editor.
+[Gleam](https://gleam.run) language syntax highlighting for the [Lite XL](https://github.com/lite-xl/lite-xl) text editor.
 
 ## Installation
 
