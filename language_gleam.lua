@@ -20,7 +20,7 @@ Here you can see which colors are used for each pattern in your chosen theme:
     https://github.com/lite-xl/lite-xl-colors/tree/master/colors
 A useful website for visualizing the color palette:
     https://coolors.co/e1e1e6-676b6f-e58ac9-f77483-ffa94d-f7c95c-93ddfa
-    
+
 To change the color of a certain syntax, change its pattern type.
 
 Example:
@@ -42,20 +42,20 @@ syntax.add {
   files = { "%.gleam$" },
   comment = "//",
   patterns = {
-    { pattern = "%f[%a]%u%w*",           type = "literal" }, -- Everything which starts from capital letter
-    
-    { pattern = "//.-\n",                type = "comment" },
-    { pattern = { '"', '"', '\\' },      type = "string" },
-    
-    { pattern = "0[bB][_01]+",           type = "number" },
-    { pattern = "0[oO][_0-7]+",          type = "number" },
-    { pattern = "0[xX][_%x]+",           type = "number" },
-    { pattern = "-?%d+[_%d]*%d",         type = "number" },
-    { pattern = "-?%d+[_%d%.eE]*",       type = "number" },
-    { pattern = "-?%.?%d+",              type = "number" }, -- Maybe some number patterns are redundant
-    
+    { pattern = "%f[%a]%u%w*",            type = "literal" }, -- Everything which starts from capital letter
+
+    { pattern = "//.-\n",                 type = "comment" },
+    { pattern = { '"', '"', '\\' },       type = "string" },
+
+    { pattern = "0[bB][_01]+",            type = "number" },
+    { pattern = "0[oO][_0-7]+",           type = "number" },
+    { pattern = "0[xX][_%x]+",            type = "number" },
+    { pattern = "-?%d+[_%d]*%d",          type = "number" },
+    { pattern = "-?%d+[_%d%.eE]*",        type = "number" },
+    { pattern = "-?%.?%d+",               type = "number" }, -- Maybe some number patterns are redundant
+
     { pattern = "[.%+%-=/%*%^%%<>!~|&#]", type = "symbol" }, -- A bunch of operators/symbols all in once
-    
+
     { pattern = "[%a_][%w_]*:",           type = "normal" },
     { pattern = "[%a_][%w_]*%f[(]",       type = "function" },
     { pattern = "[%a_][%w_]*",            type = "normal" },
