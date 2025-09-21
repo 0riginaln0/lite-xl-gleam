@@ -55,6 +55,9 @@ syntax.add {
     { pattern = "-?%.?%d+",               type = "number" }, -- Maybe some number patterns are redundant
 
     { pattern = "[.%+%-=/%*%^%%<>!~|&#]", type = "symbol" }, -- A bunch of operators/symbols all in once
+    { pattern = "[%(%)]",                 type = "normal" }, -- ( )
+    { pattern = "[%[%]]",                 type = "normal" }, -- [ ]
+    { pattern = "[%{%}]",                 type = "normal" }, -- { }
 
     { pattern = "[%a_][%w_]*:",           type = "normal" },
     { pattern = "[%a_][%w_]*%f[(]",       type = "function" },
