@@ -65,20 +65,20 @@ syntax.add {
     { pattern = "[%{%}]",           type = "normal" }, -- { }
 
 -- comment out/uncomment related patterns if you want your operators to be less/more colorful
-
     { pattern = "|>",            type = "operator" }, -- |>
     --{ pattern = "==",            type = "operator" }, -- ==
     { pattern = "<>",            type = "operator" }, -- <>
     { pattern = "%.%.",          type = "operator" }, -- ..
     { pattern = "<<",            type = "operator" }, -- <<
     { pattern = ">>",            type = "operator" }, -- >>
+    
 
     --{ pattern = "<=%.?",         type = "operator"}, -- <= <=.
     --{ pattern = ">=%.?",         type = "operator"}, -- >= >=.
     --{ pattern = "<%.?",          type = "operator"}, -- < <.
     --{ pattern = ">%.?",          type = "operator"}, -- > >.
-    --{ pattern = "[%%]",          type = "operator" }, -- %
-    --{ pattern = "[%+%-/*]%.?",   type = "operator" }, -- + - / * +. -. /. *.
+    { pattern = "[%%]",          type = "operator" }, -- %
+    { pattern = "[%+%-/*]%.?",   type = "operator" }, -- + - / * +. -. /. *.
     --{ pattern = "=",             type = "operator" }, -- =
 
 -- end of operators
