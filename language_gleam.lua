@@ -20,7 +20,9 @@ Here you can see which colors are used for each pattern in your chosen theme:
     https://github.com/lite-xl/lite-xl-colors/tree/master/colors
 A useful website for visualizing the color palette:
     https://coolors.co/e1e1e6-676b6f-e58ac9-f77483-ffa94d-f7c95c-93ddfa
-
+        Gleam color palette:
+            https://coolors.co/ffd596-9ce7ff-ffddfa-f0eeff-c8ffa7-1e1e1e-8b8b8b-ffaff3-fdffab
+    
 To change the color of a certain syntax, change its pattern type.
 
 Example:
@@ -47,22 +49,48 @@ syntax.add {
     { pattern = "//.-\n",                 type = "comment" },
     { pattern = { '"', '"', '\\' },       type = "string" },
 
-    { pattern = "0[bB][_01]+",            type = "number" },
-    { pattern = "0[oO][_0-7]+",           type = "number" },
-    { pattern = "0[xX][_%x]+",            type = "number" },
-    { pattern = "-?%d+[_%d]*%d",          type = "number" },
-    { pattern = "-?%d+[_%d%.eE]*",        type = "number" },
-    { pattern = "-?%.?%d+",               type = "number" }, -- Maybe some number patterns are redundant
-
-    { pattern = "[.%+%-=/%*%^%%<>!~|&#]", type = "symbol" }, -- A bunch of operators/symbols all in once
+    { pattern = "0[bB][_01]+",            type = "number" }, -- 0b01
+    { pattern = "0[oO][_0-7]+",           type = "number" }, -- 0o17
+    { pattern = "0[xX][_%x]+",            type = "number" }, -- 0xFF
+    { pattern = "%d+[_%d]*%d",            type = "number" }, -- 12_000
+    { pattern = "%d+[_%d%.eE]*",          type = "number" }, -- 21_000.12
+    
+    { pattern = "%->",                    type = "normal" }, -- ->
+    { pattern = "<%-",                    type = "normal" }, -- <-
     { pattern = "[%(%)]",                 type = "normal" }, -- ( )
     { pattern = "[%[%]]",                 type = "normal" }, -- [ ]
     { pattern = "[%{%}]",                 type = "normal" }, -- { }
+    
 
-    { pattern = "[%a_][%w_]*:",           type = "normal" },
-    { pattern = "[%a_][%w_]*%f[(]",       type = "function" },
-    { pattern = "[%a_][%w_]*",            type = "normal" },
-    { pattern = "@[%a_][%w_]*",           type = "keyword2" },
+
+--  comment out/uncomment related patterns
+--     if you want your operators to be less/more colorful, 
+    { pattern = "|>", type = "operator" },
+    { pattern = "==", type = "operator" }, 
+    { pattern = "<>", type = "operator" }, 
+    { pattern = "%.%.", type = "operator" }, -- ..
+    
+    { pattern = "<<", type = "operator" },
+    { pattern = ">>", type = "operator" },
+    
+    { pattern = "<=%.?", type = "operator"}, -- <= <=.
+    { pattern = ">=%.?", type = "operator"}, -- >= >=.
+    
+    { pattern = "<%.?", type = "operator"}, -- < <.
+    { pattern = ">%.?", type = "operator"}, -- > >.
+    
+    --{ pattern = "[%%]", type = "operator" }, -- %
+    --{ pattern = "[%+%-/*]%.?", type = "operator" }, -- + - / * +. -. /. *.
+    
+    --{ pattern = "=", type = "operator" },
+    
+--  end of operators
+
+
+    { pattern = "[%a_][%w_]*:",           type = "normal" },   -- map(over: , with:) <<first:bits, second:bits>>
+    { pattern = "[%a_][%w_]*%f[(]",       type = "function" }, -- functions
+    { pattern = "[%a_][%w_]*",            type = "normal" },   -- variables & constants
+    { pattern = "@[%a_][%w_]*",           type = "keyword2" }, -- @deprecated
   },
   symbols = {
     ["echo"]   = "keyword",
