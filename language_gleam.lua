@@ -83,7 +83,7 @@ syntax.add {
 
 -- end of operators
 
-    { pattern = "[%a_][%w_]*:",     type = "normal" },   -- map(over:) <<first:bits>>
+    { pattern = "[%a_][%w_]*:",     type = "comment" },   -- map(over:) <<first:bits>>
     { pattern = "[%a_][%w_]*%f[(]", type = "function" }, -- functions
     { pattern = "[%a_][%w_]*",      type = "normal" },   -- variables & constants
     { pattern = "@[%a_][%w_]*",     type = "keyword2" }, -- @deprecated
