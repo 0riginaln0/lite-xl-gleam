@@ -2,10 +2,10 @@ local style = require "core.style"
 local common = require "core.common"
 
 -- Gleam color palette: https://coolors.co/ffd596-9ce7ff-ffddfa-f0eeff-c8ffa7-1e1e1e-8b8b8b-ffaff3-fdffab
+local lavender = "#F0EEFF"
 local sunset = "#FFD596"
 local non_photo_blue = "#9CE7FF"
 local mimi_pink = "#FFDDFA"
-local lavender = "#F0EEFF"
 local light_green = "#C8FFA7"
 local eerie_black = "#1E1E1E"
 local eerie_blacker = "#151515"
@@ -43,18 +43,18 @@ style.modified = { common.color "#1c7c9c" }
 
 
 style.syntax["normal"]   = { common.color(lavender) }
-style.syntax["keyword"]  = { common.color(sunset) }
-style.syntax["function"] = { common.color(non_photo_blue) }
-style.syntax["string"]   = { common.color(light_green) }
-style.syntax["comment"]  = { common.color(battleship_gray) }
-style.syntax["operator"] = { common.color(plum) }
-style.syntax["literal"]  = { common.color(mimi_pink) }
-style.syntax["number"]   = { common.color(mindaro) }
 style.syntax["symbol"]   = { common.color(lavender) }
-style.syntax["keyword2"] = { common.color(sunset) } -- not sure about these
+style.syntax["comment"]  = { common.color(battleship_gray) }
+style.syntax["keyword"]  = { common.color(sunset) }
+style.syntax["keyword2"] = { common.color(sunset) }
+style.syntax["number"]   = { common.color(mindaro) }
+style.syntax["literal"]  = { common.color(mimi_pink) }
+style.syntax["string"]   = { common.color(light_green) }
+style.syntax["operator"] = { common.color(plum) }
+style.syntax["function"] = { common.color(non_photo_blue) }
 
-style.log["INFO"]        = { icon = "i", color = style.text }
-style.log["WARN"]        = { icon = "!", color = style.warn }
-style.log["ERROR"]       = { icon = "!", color = style.error }
+style.log["INFO"]  = { icon = "i", color = style.text }
+style.log["WARN"]  = { icon = "!", color = style.warn }
+style.log["ERROR"] = { icon = "!", color = style.error }
 
 return style
