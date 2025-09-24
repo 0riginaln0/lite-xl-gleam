@@ -58,11 +58,11 @@ syntax.add {
     { pattern = "%d+[_%d]*%d",      type = "number" }, -- 12_000
     { pattern = "%d+[_%d%.eE]*",    type = "number" }, -- 21_000.12
 
-    { pattern = "%->",              type = "normal" }, -- ->
-    { pattern = "<%-",              type = "normal" }, -- <-
-    { pattern = "[%(%)]",           type = "normal" }, -- ( )
-    { pattern = "[%[%]]",           type = "normal" }, -- [ ]
-    { pattern = "[%{%}]",           type = "normal" }, -- { }
+    { pattern = "%->",              type = "symbol" }, -- ->
+    { pattern = "<%-",              type = "symbol" }, -- <-
+    { pattern = "[%(%)]",           type = "symbol" }, -- ( )
+    { pattern = "[%[%]]",           type = "symbol" }, -- [ ]
+    { pattern = "[%{%}]",           type = "symbol" }, -- { }
 
 -- comment out/uncomment related patterns if you want your operators to be less/more colorful
     { pattern = "|>",            type = "operator" }, -- |>
@@ -85,7 +85,7 @@ syntax.add {
 
     { pattern = "[%a_][%w_]*:",     type = "comment" },   -- map(over:) <<first:bits>>
     { pattern = "[%a_][%w_]*%f[(]", type = "function" }, -- functions
-    { pattern = "[%a_][%w_]*",      type = "normal" },   -- variables & constants
+    { pattern = "[%a_][%w_]*",      type = "symbol" },   -- variables & constants
     { pattern = "@[%a_][%w_]*",     type = "keyword2" }, -- @deprecated
   },
   symbols = {
