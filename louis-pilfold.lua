@@ -50,8 +50,8 @@ style.syntax["comment"]  = { common.color(battleship_gray) }
 style.syntax["operator"] = { common.color(plum) }
 style.syntax["literal"]  = { common.color(mimi_pink) }
 style.syntax["number"]   = { common.color(mindaro) }
-style.syntax["symbol"]   = { common.color(mimi_pink) } -- not sure
-style.syntax["keyword2"] = { common.color(sunset) }    -- about these
+style.syntax["symbol"]   = { common.color(lavender) }
+style.syntax["keyword2"] = { common.color(sunset) } -- not sure about these
 
 style.log["INFO"]        = { icon = "i", color = style.text }
 style.log["WARN"]        = { icon = "!", color = style.warn }
