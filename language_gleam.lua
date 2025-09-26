@@ -68,7 +68,7 @@ syntax.add {
     { pattern = "|>",            type = "operator" }, -- |>
     --{ pattern = "==",            type = "operator" }, -- ==
     { pattern = "<>",            type = "operator" }, -- <>
-    { pattern = "%.%.",          type = "operator" }, -- ..
+    --{ pattern = "%.%.",          type = "operator" }, -- ..
     { pattern = "<<",            type = "operator" }, -- <<
     { pattern = ">>",            type = "operator" }, -- >>
     
@@ -76,16 +76,16 @@ syntax.add {
     --{ pattern = ">=%.?",         type = "operator"}, -- >= >=.
     --{ pattern = "<%.?",          type = "operator"}, -- < <.
     --{ pattern = ">%.?",          type = "operator"}, -- > >.
-    { pattern = "[%%]",          type = "operator" }, -- %
-    { pattern = "[%+%-/*]%.?",   type = "operator" }, -- + - / * +. -. /. *.
+    --{ pattern = "[%%]",          type = "operator" }, -- %
+    --{ pattern = "[%+%-/*]%.?",   type = "operator" }, -- + - / * +. -. /. *.
     --{ pattern = "=",             type = "operator" }, -- =
 
     -- map(over:) <<first:bits>>
-    { pattern = "[%a_][%w_]*:",     type = "comment" }, -- this one will highilght a whole "param:"
-    --{ pattern = "[%a_][%w_]*%f[:]", type = "symbol" }, -- this one highlights only "param":
-    --{ pattern = ":",                type = "operator"}, -- you know what it highlights :)
+    { pattern = "[%a_][%w_]*:",     type = "comment" }, --  "param:"
+    --{ pattern = "[%a_][%w_]*%f[:]", type = "symbol" }, -- "param":
+    --{ pattern = ":",                type = "operator"}, -- :
     
-    { pattern = "#", type = "symbol"},
+    --{ pattern = "#", type = "operator"},
     
     { pattern = "[%a_][%w_]*%f[(]", type = "function" }, -- functions
     { pattern = "[%a_][%w_]*",      type = "symbol" },   -- variables & constants
