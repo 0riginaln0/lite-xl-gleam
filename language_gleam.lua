@@ -81,7 +81,7 @@ syntax.add {
     --{ pattern = "=",             type = "operator" }, -- =
 
     -- map(over:) <<first:bits>>
-    { pattern = "[%a_][%w_]*:",     type = "comment" }, --  "param:"
+    --{ pattern = "[%a_][%w_]*:",     type = "comment" }, --  "param:"
     --{ pattern = "[%a_][%w_]*%f[:]", type = "symbol" }, -- "param":
     --{ pattern = ":",                type = "operator"}, -- :
     
