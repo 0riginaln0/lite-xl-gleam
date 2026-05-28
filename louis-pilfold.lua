@@ -41,6 +41,9 @@ style.warn = { common.color "#FFA94D" }
 style.error = { common.color "#FF3333" }
 style.modified = { common.color "#1c7c9c" }
 
+style.guide = { common.color "#404040" }
+style.guide_highlight = { common.color "#A0A0A0" }
+
 
 style.syntax["normal"]   = { common.color(lavender) }
 style.syntax["symbol"]   = { common.color(lavender) }
