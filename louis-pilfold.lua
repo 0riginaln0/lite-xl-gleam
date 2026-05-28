@@ -2,10 +2,10 @@ local style = require "core.style"
 local common = require "core.common"
 
 -- Gleam color palette: https://coolors.co/ffd596-9ce7ff-ffddfa-f0eeff-c8ffa7-1e1e1e-8b8b8b-ffaff3-fdffab
-local lavender = "#F0EEFF"
 local sunset = "#FFD596"
 local non_photo_blue = "#9CE7FF"
 local mimi_pink = "#FFDDFA"
+local lavender = "#F0EEFF"
 local light_green = "#C8FFA7"
 local eerie_black = "#1E1E1E"
 local eerie_blacker = "#151515"
@@ -17,13 +17,13 @@ local mindaro = "#FDFFAB"
 style.background = { common.color(eerie_black) }    -- Docview
 style.background2 = { common.color(eerie_blacker) } -- Treeview
 style.background3 = { common.color(eerie_blacker) } -- Command view
-style.text = { common.color "#97979c" }
+style.text = { common.color "#F7F7Fc" }
 style.caret = { common.color "#93DDFA" }
 style.accent = { common.color "#e1e1e6" }
 -- style.dim - text color for nonactive tabs, tabs divider, prefix in log and
 -- search result, hotkeys for context menu and command view
-style.dim = { common.color "#525257" }
-style.divider = { common.color "#202024" } -- Line between nodes
+style.dim = { common.color "#E2E2E7" }
+style.divider = { common.color "#606064" } -- Line between nodes
 style.selection = { common.color "#48484f" }
 style.line_number = { common.color "#525259" }
 style.line_number2 = { common.color "#83838f" } -- With cursor
@@ -46,15 +46,15 @@ style.syntax["normal"]   = { common.color(lavender) }
 style.syntax["symbol"]   = { common.color(lavender) }
 style.syntax["comment"]  = { common.color(battleship_gray) }
 style.syntax["keyword"]  = { common.color(sunset) }
-style.syntax["keyword2"] = { common.color(sunset) }
+style.syntax["keyword2"] = { common.color(sunset) } -- not sure about this
 style.syntax["number"]   = { common.color(mindaro) }
 style.syntax["literal"]  = { common.color(mimi_pink) }
 style.syntax["string"]   = { common.color(light_green) }
 style.syntax["operator"] = { common.color(plum) }
 style.syntax["function"] = { common.color(non_photo_blue) }
 
-style.log["INFO"]  = { icon = "i", color = style.text }
-style.log["WARN"]  = { icon = "!", color = style.warn }
-style.log["ERROR"] = { icon = "!", color = style.error }
+style.log["INFO"]        = { icon = "i", color = style.text }
+style.log["WARN"]        = { icon = "!", color = style.warn }
+style.log["ERROR"]       = { icon = "!", color = style.error }
 
 return style
